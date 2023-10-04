@@ -200,6 +200,11 @@ def mlp_classifier( X_train, y_train, X_test, y_test,hidden_layer_sizes,alpha=[0
 
 
 def Model_train(X_train, X_test, y_train, y_test, model_choice=['KNN', 'SVC','MLP'], knn_property={}, svc_property={}, mlp_property={}):
+    """Example:best_model_type,best_model_property,accuracy_max,time_min=Model_train(X_train, X_test, y_train, y_test, 
+            model_choice=['KNN', 'SVC','MLP'], 
+            knn_property={'neighbours':[3,4,5]}, 
+            svc_property={'kernal':['linear', 'poly', 'rbf'],'C':[1],'max_iter':[-1]}, 
+            mlp_property={'hidden_layer_sizes':[(100),(100,100),(100,100,100)],'alpha':[0.0001],'max_iter':[200]})"""
     accuracy=[]
     model_type=[]
     model_property=[]
